@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Work Day Scheduler</title>
+   
+    <link rel='stylesheet' type='text/css' href='assets/style.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap'/>
+	
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;}
+
+		/* The Modal (background) */
+		.modal {
+		  display: none; /* Hidden by default */
+		  position: fixed; /* Stay in place */
+		  z-index: 1; /* Sit on top */
+		  padding-top: 100px; /* Location of the box */
+		  left: 0;
+		  top: 0;
+		  width: 100%; /* Full width */
+		  height: 100%; /* Full height */
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+		/* Modal Content */
+		.modal-content {
+		  background-color: #fefefe;
+		  margin: auto;
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 80%;
+		}
+
+		/* The Close Button */
+		.close {
+		  color: #aaaaaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: #000;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+</style>
+ </head>
+
+ <body>
+    
+  <!----------------------------------------------------------------------------------------------------
+  -                                               MODAL STARTS
+  ---------------------------------------------------------------------------------------------------->
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Some text in the Modal..</p>
+		</div>
+
+	</div>
+  
+  
+<!---------------------------------------------------------------------------------------------------
+  -                                               MODAL ENDS 
+  ------------------------------------------------------------------------------------------------------->
+    <header class='jumbotron'>
+      <h1 class='display-3'>Work Day Scheduler</h1>
+      <p class='lead'>A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class='lead'></p>
+      <!--<div><a href="#" data-toggle="modal" data-target="#myModal">Click here</a></div>-->
+	  <button id="myBtn">Open Modal</button>
+    </header>
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		}
+	</script>
+
+<!--------------------------------------------------------------------------------- 
+-                               CALENDAR TASKS START 
+---------------------------------------------------------------------------------->
+
+    <section class='container'>
+	<script>
+		hours = ['08:00','09:00','10:00','11:00'];
+		html_output = '';
+		for(i = 0; i < hours.length; i++) {
+			html_output += '	      <div class="container-fluid"> ';
+			html_output += '			  <div class="row"> ';
+			html_output += '				  <div class="col-2 hour"> ';
+			html_output += '					<p>'+ hours[i] + '</p> ';
+			html_output += '				  </div> ';
+			html_output += '				  <div class="col-8 past" id="'+ hours[i] + '"> ';
+			html_output += '					<p>Hello</p>';    
+			html_output += '				  </div>';
+			html_output += '				  <div class="col-2 saveBtn">';
+			html_output += '					  <i class="fas fa-arrow-alt-circle-right"></i> ';
+			html_output += '				  </div> ';
+			html_output += '			 </div>';
+			html_output += '		  </div> ';
+		}
+		console.log(html_output);
+		document.write(html_output);
+	</script>
+
+	
+	
+<!--------------------------------------------------------------------------------- 
+-                               CALENDAR TASKS END
+---------------------------------------------------------------------------------->
+    <footer class='container container-fluid '>
+      
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/moment.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
