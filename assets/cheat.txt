@@ -1,0 +1,13 @@
+
+'           Cheat Sheet             '
+---------------------------
+
+@ => Targets html attribute
+
+Shortcuts:
+
+b4-     bootstrap snippets 
+fa4-    font awesome 4
+fa5-    font awesome 5
+fa5p-   fa 5 pro snippets
+

@@ -1,1 +1,0 @@
-CREATE GRID 3 X 17
