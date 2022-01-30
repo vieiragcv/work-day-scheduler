@@ -1,21 +1,11 @@
-var liveTime = moment().hours();
+/* Logs Current Hour */
 
+var currentHour = moment().hours();
+console.log(currentHour);
 
-var editTask = function(value) {
-  console.log('liveTime is: ' + liveTime);
-  console.log('calendarTime is: ' + value);
-  if (liveTime > value) {
-    console.log('Oops, time machine not found');
-    
-  }
-}
-
-/* checks if the hour value on the live clock is higher than hour interval  */
-
-var clickEl = document.querySelector("#clickTest");
-
-console.log(clickEl);
+/* Live Clock on Header */
 
 var liveClock = window.setInterval(function () {
   $('#currentDay').html(moment().format('ddd MM/DD/YYYY H:mm:ss'))
 }, 1000);  
+

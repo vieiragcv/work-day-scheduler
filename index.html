@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Work Day Scheduler</title>
    
-    <link rel='stylesheet' href='assets/style.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/style.css'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf' crossorigin='anonymous'/>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap'/>
   </head>
 
   <body>
-
   <!----------------------------------------------------------------------------------------------------
   -                                               MODAL STARTS
   -------------------------------------------------------------------------------------------------------
@@ -47,18 +46,21 @@
       <h1 class='display-3'>Work Day Scheduler</h1>
       <p class='lead'>A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class='lead'></p>
-
     </header>
 
-    <section class='container container-fluid'> <!-- OUTSIDE CONTAINER-->   
+<!--------------------------------------------------------------------------------- 
+-                               CALENDAR TASKS START 
+---------------------------------------------------------------------------------->
 
-      <div class="container">
+    <section class='container'>
+<!---------------------------------- 8 AM ---------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
-          <div class='col-2 center-block hour'>
-            <span><p>8 AM</p></span>
+          <div class='col-2 hour'>
+            <p>8 AM</p>
           </div>
-          <div class='col-8 past'>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="clickTest">Launch demo modal</button>        
+          <div class='col-8 past' id='task-1'>
+            <p class=''>Hello</p>    
           </div>
           <div class='col-2 saveBtn'>
               <i class="fas fa-arrow-alt-circle-right"></i>
@@ -66,16 +68,14 @@
         </div>
       </div>
       
-<!------------------------------------------------------------------
--                            COPIES
---------------------------------------------------------------------->
+<!---------------------------------- 9 AM ---------------------------------------->
       
-      <div class="container">
+      <div class="container-fluid">
         <div class='row'>
           <div class='col-2 hour'>
             <p>9 AM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-2'>
               <p>Hello</p>
           </div>
           <div class='col-2 saveBtn'>
@@ -83,15 +83,13 @@
           </div>
         </div>
       </div>
-
-        
-
-      <div class="container">
+<!---------------------------------- 10 AM ---------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col-2 hour'>
             <p>10 AM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-3'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -99,13 +97,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 11 AM ---------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>11 AM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-4'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -113,13 +111,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 12 PM ---------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>12 PM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-5'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -127,13 +125,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 1 PM ---------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>1 PM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-6'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -141,13 +139,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 2 PM ----------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>2 PM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-7'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -155,13 +153,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 3 PM ----------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>3 PM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-8'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -169,13 +167,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 4 PM ----------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>4 PM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-9'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -183,13 +181,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 5 PM ----------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>5 PM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-10'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -197,13 +195,13 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
+<!---------------------------------- 6 PM ----------------------------------------->
+      <div class="container-fluid">
         <div class='row'>
           <div class='col hour'>
             <p>6 PM</p>
           </div>
-          <div class='col-8 past'>
+          <div class='col-8 past' id='task-11'>
               <p>Hello</p>
           </div>
           <div class='col saveBtn'>
@@ -211,27 +209,17 @@
           </div>
         </div>
       </div>
+    </section>
+<!--------------------------------------------------------------------------------- 
+-                               CALENDAR TASKS END
+---------------------------------------------------------------------------------->
+    <footer class='container container-fluid '>
       
-</section>
-
-<footer class='container'>
-  <section>
-    <h6 class=''>Work Day Scheduler</h6>
-    <p class='lead'>A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class='lead'></p>
-  </section>
-</footer>
-
-<!--
-
-  <footer>
-  <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved. 
-  <br>Design: <a href="https://epitome.solutions" target="_parent" title="Epitome Solutions">Epitome Solutions</a></p>
-</footer>
-
--->
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="/assets/moment.js"></script>
+    <script src="assets/script.js"></script>
   </body>
 </html>
