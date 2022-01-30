@@ -1,50 +1,30 @@
-var editTask = function(value) {
-  console.log('liveTime is: ' + liveTime);
-  console.log('calendarTime is: ' + value);
-
-  if (liveTime > value) {
-    console.log('Oops, time machine not found');
-  }
-}
-
-var taskEditHandler = function (event) {
-  var targetEl = event.target;
- 
-  if (targetEl.className === "col-8 past") {
-    var taskId = targetEl.id;
-    console.log(taskId);
-    console.log(targetEl);
-  }
-}
-
-var createTask = function(value) {
-  var taskEl = document.createElement("div");
-  taskEl.className = "col-8";
-  taskEl.id = "task"-value;
-}
-
-
-/* EDITS TASK NAME - text String as input */
-
-
-
-
 /* Event Listeners  */
 /* JQUERY */
+var taskSlots = ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+var taskIds = [];
+var clickedEl;
+var taskID;
 
-$(document).ready(function() {
+console.log(taskSlots);
+console.log(document.getElementById('8am'));
 
-  $('#task-1').dblclick(function() {
-    taskEditHandler();
+function findMatchingDiv(value) {
+  for(i=0; i < taskSlots.length; i++) {           // runs array of task hours
+    var x = taskSlots[i];
+    console.log(x);
+    
+    if( x === value){                           // if IDs match
 
+    }
+  }
+}
+
+
+$(document).ready(function(){
+for(i=0; i < taskSlots.length; i++) {
+  var x = "#" + taskSlots[i];
+  $(x).click(function(event){
+  alert('you have clicked');
   });
-
-});                      
-
-//var taskEditEl = document.querySelector("#0800");
-//console.log(taskEditEl);
-//taskEditEl.addEventListener('dblclick', taskEditHandler);
-
-
-var el = document.querySelector('#i0800');
-console.log(el);
+}
+});
