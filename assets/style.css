@@ -3,6 +3,15 @@ body {
   font-size: 16px;
   
 }
+input {
+  flex-wrap: wrap;
+  border: red;
+  height: 60px;
+  width: 600px;
+  align-items: center;
+  text-align: left;
+}
+
 
 textarea{
   background: transparent;
@@ -32,7 +41,7 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 140px;
+  height: 155px;
   border-top: 1px solid white;
   text-align: center;
 }
@@ -85,22 +94,6 @@ i.fab {
   margin: auto;
   color: white;
   
-}
-
-.fa-fish {
-  color: salmon;
-}
-
-.fa-frog {
-  color: green;
-}
-
-.fa-user-ninja.vanished {
-  opacity: 0.0;
-}
-
-.fa-facebook {
-  color: rgb(59, 91, 152);
 }
 
 footer {
