@@ -29,23 +29,22 @@ for(i=0; i < taskSlots.length; i++) {
 });
 
 for(i = 0; i < taskSlotsNum.length; i++){
-  
   if (currentHour > taskSlotsNum[i]) {
     $(taskSlotsiD[i]).addClass('past');
+    $(taskSlotsiD[i]).children('form').addClass('past').children('input').addClass('past');
     console.log('gray' + taskSlotsNum[i])
   }
   else if (currentHour < taskSlotsNum[i]) {
     $(taskSlotsiD[i]).addClass('future');
+    $(taskSlotsiD[i]).children('form').addClass('future').children('input').addClass('future');
     console.log('green' + taskSlotsNum[i]);
   }
   else {
     $(taskSlotsiD[i]).addClass('present');
+    $(taskSlotsiD[i]).children('form').addClass('present').children('input').addClass('present');
     console.log('red' + taskSlotsNum[i]);
   } 
 }
-
-
-
 
 
 
