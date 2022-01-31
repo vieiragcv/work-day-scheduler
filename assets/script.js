@@ -30,24 +30,24 @@ for(i=0; i < taskSlots.length; i++) {
 }
 });
 
-/*          SETS CORRECT COLOR CODING           */
+/*          SETS CORRECT COLOR CODING          */
 
 for(i = 0; i < taskSlotsNum.length; i++){
 
   if (currentHour > taskSlotsNum[i]) {
     $(taskSlotsiD[i]).addClass('past');
     $(taskSlotsiD[i]).children('form').addClass('past form-8am').children('input').addClass('past');
-    console.log('gray' + taskSlotsNum[i])
+
   }
   else if (currentHour < taskSlotsNum[i]) {
     $(taskSlotsiD[i]).addClass('future');
     $(taskSlotsiD[i]).children('form').addClass('future').children('input').addClass('future');
-    console.log('green' + taskSlotsNum[i]);
+
   }
   else {
     $(taskSlotsiD[i]).addClass('present');
     $(taskSlotsiD[i]).children('form').addClass('present').children('input').addClass('present');
-    console.log('red' + taskSlotsNum[i]);
+
   } 
 }
 
@@ -63,7 +63,6 @@ var btn = document.getElementById("myBtn"); // Get the button that opens the mod
 
 
 var span = document.getElementsByClassName("close"); // Get the <span> element that closes the modal
-console.log(span);
 
 
 btn.onclick = function() {                // When the user clicks the button, open the modal 
