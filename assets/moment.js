@@ -1,7 +1,6 @@
 /* Logs Current Hour */
 
 var currentHour = moment().hours();
-console.log (currentHour);
 
 //Live Clock on Header 
 
