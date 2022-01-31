@@ -1,8 +1,17 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1;
+  
 }
+input {
+  flex-wrap: wrap;
+  border: red;
+  height: 60px;
+  width: 600px;
+  align-items: center;
+  text-align: left;
+}
+
 
 textarea{
   background: transparent;
@@ -32,8 +41,9 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
+  height: 155px;
+  border-top: 1px solid white;
+  text-align: center;
 }
 
 .hour {
@@ -66,6 +76,66 @@ textarea{
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 30px;
   transition: all .3s ease-in-out;
+}
+
+/*  New classes                                     */
+
+.hover-border {
+  border-color: green;
+}
+
+/*   Icon Customizations */
+
+i.fas,
+i.fab {
+  display: block;
+  margin: auto;
+  color: white;
+  
+}
+
+footer {
+  z-index: 0;
+  background-color: whitesmoke;
+  color:whitesmoke;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
